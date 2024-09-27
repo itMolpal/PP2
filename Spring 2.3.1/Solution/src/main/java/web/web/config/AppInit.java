@@ -20,7 +20,6 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
         return new String[]{"/"};
     }
 
-    //фильтры для PATCH/DELETE запросов! Честно скомуниздил у Алишева))
     @Override
     public void onStartup(ServletContext aServletContext) throws ServletException {
         super.onStartup(aServletContext);

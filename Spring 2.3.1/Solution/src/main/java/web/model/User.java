@@ -15,18 +15,15 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotEmpty(message = "The first line in your passport. Come on, I believe in you!")
-    @Size(min = 2, max = 30, message = "Name should be between 2 and 30 characters")
+    @NotEmpty
+    @Size(min = 1, max = 20)
     @Column(name = "name")
     private String name;
 
-    @NotEmpty(message = "Look in your passport, the second line after the name. This is a last name")
-    @Size(min = 2, max = 30, message = "Lastname should be between 2 and 30 characters")
+    @NotEmpty
     @Column(name = "last_name")
     private String lastName;
 
-    @Min(value = 0,message = "Age cannot be less than zero. Dalbaeb!")
-    @Max(value = 135, message = "Age cannot exceed 135 years. Ti sho syka, mumia ?")
     @Column(name = "age")
     private int age;
 }
